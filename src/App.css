@@ -218,9 +218,39 @@ border-radius: 2rem;
   filter: brightness(1.6);
 }
 
+.emojiContainer {
+  max-width: max-content;
+  min-width: max-content;
+  border: 1px solid white;
+  position: absolute;
+  bottom: 3vh;
+  left: 0%;
+  right: 0%;
+  margin: auto auto 4.9rem auto;
+  position: absolute;
+  background: #f8f8f8;
+  color: black;
+  border: 1px solid white;
+
+  height: max-content;
+  padding: 0.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  opacity: 80%;
+  border-radius: 2rem;
+  gap: 1rem;
+  justify-content: space-between;
+
+    text-align: center;
+    font-size: 0.9rem;
+}
+
 @media only screen and (max-width: 915px) {
 
-.incrementContainer {
+  .incrementContainer {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
@@ -229,6 +259,11 @@ border-radius: 2rem;
     justify-content: flex-start;
     justify-items: flex-start;
   }
+
+    .emojiContainer {
+      margin: auto auto 4.37rem auto;
+    }
+
 }
 
 @media only screen and (max-width: 313px) {
@@ -254,6 +289,10 @@ border-radius: 2rem;
     bottom: 6vh;
   }
 
+  .emojiContainer {
+    margin: auto auto 2.9rem auto;
+  }
+
 }
 
 @media only screen and (max-width: 358px) {
@@ -272,6 +311,14 @@ border-radius: 2rem;
     bottom: 6vh;
   }
 
-  
+  .emojiContainer {
+    margin: auto auto 2.2rem auto;
+    font-size: 0.7rem;
+    width: max-content;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+
 
 }
+

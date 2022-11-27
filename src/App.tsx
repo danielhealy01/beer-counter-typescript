@@ -140,12 +140,11 @@ function App() {
     <div className="background">
       <div className="container">
         <p className="counter" id="counter">
-          {drinker.length === 0 ? 'Time for a beer?' : null }
-          {drinker === 'drinker1' ? drinker1Total : null}
-          {drinker === 'drinker2' ? drinker2Total : null}
-          {drinker === 'drinker3' ? drinker3Total : null}
-          {drinker === 'drinker4' ? drinker4Total : null}
-
+          {drinker.length === 0 ? "Time for a beer?" : null}
+          {drinker === "drinker1" ? drinker1Total : null}
+          {drinker === "drinker2" ? drinker2Total : null}
+          {drinker === "drinker3" ? drinker3Total : null}
+          {drinker === "drinker4" ? drinker4Total : null}
         </p>
         <div className="btnContainer">
           <div className="btn minus" onClick={handleDecrease}>
@@ -180,10 +179,26 @@ function App() {
         </div>
       </div>
       <div className="avatarContainer">
-        <div className="avatar1" id="1" onClick={handleSetDrinker1}></div>
-        <div className="avatar2" id="2"onClick={handleSetDrinker2}></div>
-        <div className="avatar3" id="3" onClick={handleSetDrinker3}></div>
-        <div className="avatar4" id="4" onClick={handleSetDrinker4}></div>
+        <div className="avatar1" id="1" onClick={handleSetDrinker1}>
+          <div className="emojiContainer">
+            {drinker1Total > 0 ? drinker1Total : null} &#127866;
+          </div>
+        </div>
+        <div className="avatar2" id="2" onClick={handleSetDrinker2}>
+          <div className="emojiContainer">
+            {drinker2Total > 0 ? drinker2Total : null} &#127866;
+          </div>
+        </div>
+        <div className="avatar3" id="3" onClick={handleSetDrinker3}>
+          <div className="emojiContainer">
+            {drinker3Total > 0 ? drinker3Total : null} &#127866;
+          </div>
+        </div>
+        <div className="avatar4" id="4" onClick={handleSetDrinker4}>
+          <div className="emojiContainer">
+            {drinker4Total > 0 ? drinker4Total : null} &#127866;
+          </div>
+        </div>
       </div>
     </div>
   );
