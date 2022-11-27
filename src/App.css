@@ -1,0 +1,277 @@
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  max-width: 100vw;
+  max-height: 100vh;
+  
+
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.background::before {
+  content:"";
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('./assets/wil.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: brightness(0.7);
+  position:absolute;
+  background-position-y: 0vh;
+}
+
+.container {
+position: absolute;
+background: #f8f8f8;
+color: black;
+border: 1px solid white;
+
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+margin: auto;
+min-width: max-content;
+max-width: max-content;
+height: max-content;
+padding: 0.7rem 2rem 2rem 2rem;
+
+display: flex;
+flex-direction: column;
+place-items: center;
+text-align: center;
+opacity: 80%;
+border-radius: 2rem;
+
+}
+
+.counter {
+  font-size: 2rem;
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+}
+
+.btn{
+  border: 1px solid black;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  min-width: 1vw;
+  max-width: max-content;
+  cursor: pointer;
+  border-radius: 0.4rem;
+
+
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.plus {
+  background-color: #f9e3ff;
+}
+
+.minus {
+  background-color: rgb(209, 255, 254);
+}
+
+.incrementContainer {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+.incSpan {
+  margin-top: 0.7rem;
+  margin-bottom: 0.6rem;
+}
+
+.volBtnInactive {
+  background-color: white;
+}
+
+.volBtnActive {
+  background-color: black;
+  color: white
+}
+
+.container2 {
+  width: 500px;
+  height: 500px;
+  border: 1px solid white;
+  position: absolute;
+  bottom: 3vh;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+  position: absolute;
+  background: #f8f8f8;
+  color: black;
+  border: 1px solid white;
+
+  height: max-content;
+  padding: 0.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  opacity: 60%;
+  border-radius: 2rem;
+}
+
+.avatarContainer {
+  max-width: max-content;
+  min-width: max-content;
+  height: 500px;
+  border: 1px solid white;
+  position: absolute;
+  bottom: 3vh;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+  position: absolute;
+  background: #f8f8f8;
+  color: black;
+  border: 1px solid white;
+
+  height: max-content;
+  padding: 0.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  opacity: 80%;
+  border-radius: 2rem;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.avatar1 {
+  background-image: url('./assets/avatar1.png');
+  width: 5rem;
+  height: 5rem;
+  filter: brightness(1.3);
+  filter: grayscale();
+}
+
+.avatar2 {
+  background-image: url('./assets/avatar2.png');
+  width: 5rem;
+  height: 5rem;
+  filter: grayscale();
+}
+.avatar3 {
+  background-image: url('./assets/avatar3.png');
+  width: 5rem;
+  height: 5rem;
+  filter: grayscale();
+}
+.avatar4 {
+  background-image: url('./assets/avatar4.png');
+  width: 5rem;
+  height: 5rem;
+  filter: grayscale();
+}
+
+.avatarActive {
+  filter: brightness(1.2);
+}
+
+.avatar1Active {
+  filter: brightness(1.6);
+}
+
+@media only screen and (max-width: 915px) {
+
+.incrementContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    place-items:unset;
+    align-items: center;
+    justify-content: flex-start;
+    justify-items: flex-start;
+  }
+}
+
+@media only screen and (max-width: 313px) {
+
+  .container {
+    width: 99vw;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+
+}
+
+@media only screen and (max-width: 518px) {
+
+.avatar1, .avatar2, .avatar3, .avatar4 {
+  width: 3rem;
+  height: 3rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  }
+
+  .avatarContainer {
+    bottom: 6vh;
+  }
+
+}
+
+@media only screen and (max-width: 358px) {
+
+  .avatar1,
+  .avatar2,
+  .avatar3,
+  .avatar4 {
+    width: 2rem;
+    height: 2rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .avatarContainer {
+    bottom: 6vh;
+  }
+
+  
+
+}
