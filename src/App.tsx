@@ -1,26 +1,26 @@
-import { useState, useRef } from 'react'
+import { useState} from 'react'
 import './App.css'
 
 function App() {
 
-  const [volume, setVolume] = useState("pint");
-  const [drinker, setDrinker] = useState("");
+  const [volume, setVolume] = useState<string>("pint");
+  const [drinker, setDrinker] = useState<string>("");
 
-  const [drinker1Total, setDrinker1Total] = useState(0)
-  const [drinker2Total, setDrinker2Total] = useState(0);
-  const [drinker3Total, setDrinker3Total] = useState(0);
-  const [drinker4Total, setDrinker4Total] = useState(0);
+  const [drinker1Total, setDrinker1Total] = useState<number>(0)
+  const [drinker2Total, setDrinker2Total] = useState<number>(0);
+  const [drinker3Total, setDrinker3Total] = useState<number>(0);
+  const [drinker4Total, setDrinker4Total] = useState<number>(0);
 
-  const handleSetVolumePint = () => {
+  const handleSetVolumePint = ():void => {
     setVolume("pint");
   };
 
-  const handleSetVolumeHalf = () => {
+  const handleSetVolumeHalf = ():void => {
     setVolume("half");
   };
 
-  const handleIncrease = () => {
-    if (drinker === 'drinker1') {
+  const handleIncrease = (): void => {
+    if (drinker === "drinker1") {
       volume === "pint"
         ? setDrinker1Total(drinker1Total + 1)
         : setDrinker1Total(drinker1Total + 0.5);
@@ -42,10 +42,10 @@ function App() {
       volume === "pint"
         ? setDrinker4Total(drinker4Total + 1)
         : setDrinker4Total(drinker4Total + 0.5);
-    }    
+    }
   };
 
-  const handleDecrease = () => {
+  const handleDecrease = ():void => {
     if (drinker === 'drinker1') {
       if (drinker1Total > 0) {
         volume === "half"
@@ -88,7 +88,7 @@ function App() {
 
   };
 
-  const handleSetDrinker1 = () => {
+  const handleSetDrinker1 = ():void => {
     setDrinker("drinker1");
     const drinker1 = document.getElementById("1");
     const drinker2 = document.getElementById("2");
@@ -100,7 +100,7 @@ function App() {
     drinker4?.classList.remove("avatarActive")
   };
 
-  const handleSetDrinker2 = () => {
+  const handleSetDrinker2 = ():void => {
     setDrinker("drinker2");
     const drinker1 = document.getElementById("1");
     const drinker2 = document.getElementById("2");
@@ -112,7 +112,7 @@ function App() {
     drinker4?.classList.remove("avatarActive");
   };
 
-  const handleSetDrinker3 = () => {
+  const handleSetDrinker3 = (): void => {
     setDrinker("drinker3");
     const drinker1 = document.getElementById("1");
     const drinker2 = document.getElementById("2");
@@ -124,7 +124,7 @@ function App() {
     drinker4?.classList.remove("avatarActive");
   };
 
-  const handleSetDrinker4 = () => {
+  const handleSetDrinker4 = (): void => {
     setDrinker("drinker4");
     const drinker1 = document.getElementById("1");
     const drinker2 = document.getElementById("2");
